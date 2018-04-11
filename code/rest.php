@@ -6,7 +6,7 @@
 // $username = "root";
 // $password = "mysql";
 // $dbname = "crawler";
-$servername = "mysql";
+$servername = "localhost";
 $username = "root";
 $password = "mysql";
 $dbname = "Crawler";

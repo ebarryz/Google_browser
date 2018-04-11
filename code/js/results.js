@@ -6,6 +6,13 @@ $(document).ready(function() {
 	// albo użyć natywnego FetchAPI
 	function doMagic() {
 		console.log('Do magic!');
+		fetch('rest.php?search=' + searchButton.val())
+		  .then(function(response) {
+		    return response.json();
+		  })
+		  .then(function(myJson) {
+		    console.log(myJson);
+		  });
 	}
 
 	searchButton.on('keypress', function(event) {
