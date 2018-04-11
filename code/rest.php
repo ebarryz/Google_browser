@@ -12,7 +12,7 @@ $password = "mysql";
 $dbname = "Crawler";
 
 if(!empty($_GET['search'])){
-    $searchTerm = $_GET['url'];
+    $searchTerm = $_GET['search'];
 }
 
 // Create connection
