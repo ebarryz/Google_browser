@@ -6,11 +6,14 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
 		<link rel="stylesheet" href="results.css">
 		<link rel="stylesheet" href="reset.css">
+		
+		<script src="js/jquery-3.1.1.js"></script>
+		<script src="js/results.js"></script>
 	</head>
 	<body>
 		<div class="main">
 			<div class="logo">
-				<img src="google_logo.png">
+				<img src="images/google_logo.png">
 			</div>
 			<div class="search">
 				<form action="results.php" type = "GET">
@@ -18,9 +21,9 @@
 				</form>
 			</div>
 			<div class="icons">				
-		        <img src="selection.png">
-		        <img src="bell.png">
-		        <img src="icon.png">
+		        <img src="images/selection.png">
+		        <img src="images/bell.png">
+		        <img src="images/icon.png">
 			</div>
 			<div class="menu">
 				<div class="text wybrany">Wszystko</div>
