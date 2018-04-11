@@ -8,7 +8,7 @@
     // $username = "root";
     // $password = "mysql";
     // $dbname = "crawler";
-    $servername = "mysql";
+    $servername = "localhost";
     $username = "root";
     $password = "mysql";
     $dbname = "Crawler";
@@ -136,7 +136,7 @@
         <?php
             // Display crawler results in HTML
             foreach ($pageCrawlerResult['urls'] as $index=>$href) {
-                echo $result[$index] = '<a class="crawler-single-result" href="' . $href . '">' . $href . '</a>';
+                echo $result[$index] = '<a class="crawler-single-result" href="crawler.php?url=' . urlencode($href) . '">' . $href . '</a>';
             }
         ?>
     </div>

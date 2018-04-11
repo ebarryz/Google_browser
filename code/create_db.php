@@ -5,7 +5,7 @@
 // $password = "mysql";
 
 // My database access data
-$servername = "mysql";
+$servername = "localhost";
 $username = "root";
 $password = "mysql";
 $dbname = "Crawler";
