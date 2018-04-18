@@ -25,22 +25,23 @@ if ($conn->connect_error) {
 
 // ---------------------------------------------- FUNCTIONS ----------------------------------------------
 function getResults($conn, $searchTerm) {
-    $sql = "SELECT `id`, `site`, `content`, `date` FROM `SitesViewed` WHERE 1";
+    $sql = "SELECT * FROM sitesviewed WHERE content LIKE '%$searchTerm%'";
+    var_dump($sql);
 
-	$result = $conn->query($sql);
+	$result = $conn -> query($sql);
+	var_dump($result);
+		if ($result-> num_rows > 0) {
+			echo('NUMBER OF RECORDS: '.$result -> num_rows);
+			$myArray = [];
 
-	if ($result->num_rows > 0) {
-		$myArray = [];
-
-	    // output data of each row
-	    while($row = $result->fetch_assoc()) {
-            $myArray[] = $row;
-	    }
-
-	    echo json_encode($myArray);
-	} else {
-	    echo "0 results";
-	}
+		    // output data of each row
+		    while($row = $result->fetch_assoc()) {
+	            $myArray[] = $row;
+		    }
+		    echo json_encode($myArray);
+		} else {
+		    echo "0 results";
+		}
 }
 
 if(isset($searchTerm)) {
